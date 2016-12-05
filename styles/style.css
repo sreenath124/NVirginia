@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer; }
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 10px; }
+
+header #logo {
+  text-align: center;
+  height: 80px; }
+  header #logo h1 {
+    display: inline-block;
+    line-height: 80px;
+    font-size: 35px; }
+  header #logo #icons_container {
+    float: right;
+    margin: 30px 20px; }
+    header #logo #icons_container .icons {
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      padding: 2px 2px;
+      border-radius: 50%; }
+    header #logo #icons_container #facebook {
+      background-color: #3b5998; }
+    header #logo #icons_container #twitter {
+      background-color: #00aced; }
+    header #logo #icons_container #instagram {
+      background-color: #0080ff; }
+    header #logo #icons_container #search {
+      color: #ddd; }
+header nav {
+  text-align: center;
+  border-top: 1px solid #aaa; }
+  header nav ul li {
+    display: inline-block;
+    cursor: pointer; }
+  header nav #main_nav {
+    padding: 10px 0; }
+    header nav #main_nav #menu_button {
+      color: #29a3a3;
+      padding-right: 20px; }
+    header nav #main_nav li {
+      font-size: 24px;
+      padding-right: 20px; }
+      header nav #main_nav li a {
+        font-family: 'AcuminProExtraCond'; }
+  header nav #sub_nav {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0; }
+    header nav #sub_nav li {
+      font-size: 12px;
+      padding-right: 20px; }
+      header nav #sub_nav li a {
+        color: #aaa; }
+
+article {
+  margin: 0 auto; }
+
+footer {
+  text-align: center;
+  border-top: 1px solid #ddd; }
+  footer nav {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px 0; }
+    footer nav ul {
+      display: inline-block;
+      width: 45%;
+      vertical-align: top; }
+      footer nav ul h4 {
+        text-align: left; }
+      footer nav ul li {
+        text-align: left;
+        padding: 5px 0; }
+      @media (min-width: 1024px) {
+        footer nav ul {
+          display: inline-block;
+          vertical-align: top;
+          padding: 0 40px; } }
+    footer nav #subscription {
+      padding-top: 20px; }
+  footer h5 {
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    text-align: center; }
+
+.content {
+  padding-bottom: 40px; }
+  .content .image {
+    text-align: center;
+    padding: 20px 0 30px; }
+    .content .image img {
+      height: 80px; }
+  .content .date {
+    width: 80%;
+    margin: 10px auto;
+    padding-top: 20px; }
+    @media (min-width: 1024px) {
+      .content .date {
+        display: inline-block;
+        width: 20%;
+        vertical-align: top; }
+        .content .date h2, .content .date span {
+          font-size: 25px;
+          display: block;
+          font-weight: bold;
+          text-align: right;
+          padding-right: 10px; } }
+  .content .stories {
+    width: 100%;
+    margin: 10px auto;
+    padding-top: 20px; }
+    .content .stories ul li ul li {
+      padding-bottom: 8px; }
+    @media (min-width: 1024px) {
+      .content .stories {
+        display: inline-block;
+        width: 42%;
+        vertical-align: top; } }
+  .content .book_cover_page {
+    width: 80%;
+    margin: 10px auto;
+    padding-top: 20px;
+    text-align: center; }
+    .content .book_cover_page img {
+      width: 70%;
+      height: 400px;
+      min-width: 280px;
+      max-width: 400px; }
+    .content .book_cover_page button {
+      display: block;
+      background-color: #ffff00;
+      border-radius: 3px;
+      border: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 15px;
+      margin: 10px auto;
+      width: 200px;
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      box-shadow: inset -3px -3px 3px #aaa; }
+    @media (min-width: 1024px) {
+      .content .book_cover_page {
+        display: inline-block;
+        width: 32%;
+        vertical-align: top;
+        text-align: center; }
+        .content .book_cover_page img {
+          width: 320px;
+          height: 450px; } }
+
+.max_width {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.list_items {
+  border-left: 3px solid #29a3a3;
+  margin-bottom: 20px;
+  padding: 0 10px; }
+  .list_items span {
+    font-weight: bold;
+    font-style: italic;
+    color: #29a3a3;
+    font-size: 15px; }
+  .list_items h2 {
+    font-weight: bold;
+    font-size: 18px; }
+
+/*# sourceMappingURL=style.css.map */
