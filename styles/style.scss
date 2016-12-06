@@ -17,6 +17,7 @@ li {
 }
 li,button {
 	text-transform: uppercase;
+	color: $black;
 }
 
 header {
@@ -26,8 +27,9 @@ header {
         h1 {
             display: inline-block;
             line-height: 80px;
-            font-size: 35px;
+            font-size: 48px;
             font-family: "acumin-pro-extra-condensed", sans-serif;
+            color: $category_title;
         }
         #icons_container {
             float: right;
@@ -129,6 +131,7 @@ header {
             color: $white;
             padding: 5px;
             float: right;
+            cursor: pointer;
         }
         ul {
             padding: 20px 0;
@@ -147,6 +150,7 @@ header {
                 border: 1px solid $section_border;
                 padding: 0 3px;
                 text-transform: none;
+                cursor: pointer;
             }
         }
     }
@@ -210,14 +214,19 @@ footer {
             height: auto;
         }
     }
-    .date {
+ 	.inner_contents{
+ 		@include bp-large {
+ 			display: flex;
+ 		}
+ 		   
+ 		   .date {
         width: 80%;
         margin: 10px auto;
         padding-top: 20px;
         font-family: 'acumin-pro-wide';
         @include bp-large {
-            display: inline-block;
-            width: 20%;
+            flex: 1;
+            // width: 20%;
             vertical-align: top;
             h2,
             span {
@@ -237,8 +246,8 @@ footer {
             padding-bottom: 8px;
         }
         @include bp-large {
-            display: inline-block;
-            width: 42%;
+            flex: 2;
+            // width: 42%;
             vertical-align: top;
         }
     }
@@ -268,12 +277,13 @@ footer {
             @include box-shadow(-3px, -3px, 3px, #aaa);
         }
         @include bp-large {
-            display: inline-block;
-            width: 32%;
+            flex: 2;
+            // width: 32%;
             vertical-align: top;
             text-align: center;
         }
     }
+ 	}
 }
 
 .max_width {
