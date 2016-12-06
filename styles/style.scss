@@ -254,7 +254,7 @@ footer {
         }
         button {
             display: block;
-            background-color: #ffff00;
+            background-color: $yellow;
             @include border-radius(3px);
             border: none;
             font-weight: bold;
