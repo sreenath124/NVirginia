@@ -1,3 +1,4 @@
+@import 'config.scss';
 * {
     margin: 0;
     padding: 0;
@@ -24,52 +25,72 @@ header {
             display: inline-block;
             line-height: 80px;
             font-size: 35px;
+            font-family: "acumin-pro-extra-condensed", sans-serif;
         }
         #icons_container {
             float: right;
             margin: 30px 20px;
             .icons {
-                width: 20px;
-                height: 20px;
-                color: #fff;
-                padding: 2px 2px;
+                width: 25px;
+                height: 25px;
+                color: $white;
                 border-radius: 50%;
+                line-height: 25px;
+            }
+            #facebook,
+            #twitter,
+            #instagram {
+                display: none;
+                @include bp-large {
+                	display: inline-block;
+                }
             }
             #facebook {
-                background-color: #3b5998;
+                background-color: $facebook_bg_color;
             }
             #twitter {
-                background-color: #00aced;
+                background-color: $twitter_bg_color;
             }
             #instagram {
-                background-color: #0080ff;
+                background-color: $instagram_bg_color;
             }
             #search {
-                color: #ddd;
+                color: $search_button;
             }
         }
     }
-    nav {
+    #horizontal_nav {
         text-align: center;
-        border-top: 1px solid #aaa;
+  		@include bp-large {
+  			border-top: 1px solid #aaa;
+  		}
+        #menu_button {
+            color: #29a3a3;
+            float: left;
+    margin-top: -53px;
+    margin-left: 15px;
+            @include bp-large {
+            	display: inline-block;
+                margin: 30px;
+            }
+        }
         ul {
             li {
                 display: inline-block;
- 
                 cursor: pointer;
             }
         }
         #main_nav {
-            padding: 10px 0;
-            #menu_button{
-            	color: #29a3a3;
-            	padding-right: 20px;
-            }
-            li {
-                font-size: 24px;
-                padding-right: 20px;
-                a{
-                	font-family: 'AcuminProExtraCond';
+            display: none;
+            @include bp-large {
+                padding: 10px 0;
+                display: inline-block;
+                li {
+                    padding-right: 20px;
+                    a {
+                        font-family: "acumin-pro-extra-condensed", sans-serif;
+                        font-size: 40px;
+                    }
                 }
             }
         }
@@ -77,12 +98,53 @@ header {
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
-            li{
-            	font-size: 12px;
-            	padding-right: 20px;
-            	a{
-            		color: #aaa;
-            	}
+            li {
+                font-size: 12px;
+                padding-right: 20px;
+                a {
+                    color: #aaa;
+                    font-family: 'acumin-pro';
+                }
+            }
+        }
+    }
+    #side_nav {
+        display: none;
+        background-color: $white;
+        width: 250px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 4;
+        padding: 20px;
+        h3 {
+            display: inline-block;
+            color: #29a3a3;
+        }
+        #close_button {
+            border: none;
+            background-color: $black;
+            color: $white;
+            padding: 5px;
+            float: right;
+        }
+        ul {
+            padding: 20px 0;
+            li {
+                border-bottom: 1px solid #ddd;
+                padding: 8px;
+                font-size: 16px;
+                &:last-child {
+                    border: none;
+                }
+            }
+            i {
+                float: right;
+                background-color: $white;
+                color: #aaa;
+                border: 1px solid #ddd;
+                padding: 0 3px;
+                text-transform: none;
             }
         }
     }
@@ -90,127 +152,130 @@ header {
 
 article {
     margin: 0 auto;
-
 }
 
 footer {
     text-align: center;
-     border-top: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     nav {
-       	width: 80%;
-       	margin: 10px auto;
+        width: 90%;
+        margin: 10px auto;
         padding: 20px 0;
         ul {
-        	display: inline-block;
-        	width: 45%;
-        	vertical-align: top;
-        	h4{
-            	text-align: left;
-            }
+            width: 100%;
+            text-align: center;
+            padding-bottom: 10px;
             li {
+                padding: 2px 0;
+                font-family: 'acumin-pro';
+            }
+            @include bp-medium {
+                display: inline-block;
                 text-align: left;
-                padding: 5px 0;
+                width: auto;
+                vertical-align: top;
+                padding: 0 40px;
+                &:last-child {
+                    margin: 0;
+                    padding-right: 0;
+                }
             }
-            @media (min-width: 1024px) {
-            	display: inline-block;
-            vertical-align: top;
-            padding: 0 40px;
-            
-            }
-
         }
-        #subscription{
-        	padding-top: 20px;
+        #subscription {
+            padding-top: 10px;
+            @include bp-large {
+                padding-top: 20px;
+            }
         }
     }
-    h5{
-    	padding: 20px 0;
-    	   border-top: 1px solid #ddd;
-    	   text-align: center;
+    p {
+        padding: 20px 0;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        font-size: 12px;
+        text-transform: uppercase;
     }
-   
-    	
- 
 }
 
 .content {
-		padding-bottom: 40px;
-	 .image {
+    padding-bottom: 40px;
+    .image {
         text-align: center;
         padding: 20px 0 30px;
         img {
             height: 80px;
+            max-width: 500px;
+            width: 90%;
         }
     }
     .date {
- 		width: 80%;
- 		margin: 10px auto;
- 		padding-top: 20px;
-    	@media (min-width: 1024px) {
-    		 display: inline-block;
-        width: 20%;
-        vertical-align: top;
-        h2, span{
-        	font-size: 25px;
-        	display: block;
-        	font-weight: bold;
-        	text-align: right;
-        	padding-right: 10px;
+        width: 80%;
+        margin: 10px auto;
+        padding-top: 20px;
+        font-family: 'acumin-pro-wide';
+        @include bp-large {
+            display: inline-block;
+            width: 20%;
+            vertical-align: top;
+            h2,
+            span {
+                font-size: 25px;
+                display: block;
+                font-weight: bold;
+                text-align: right;
+                padding-right: 10px;
+            }
         }
-    	}
-       
     }
     .stories {
-    	width: 100%;
- 		margin: 10px auto;
- 		padding-top: 20px;
- 		ul li ul li{
-        	padding-bottom: 8px;
+        width: 80%;
+        margin: 10px auto;
+        padding-top: 20px;
+        ul li ul li {
+            padding-bottom: 8px;
         }
-       @media (min-width: 1024px) {
-       		 display: inline-block;
-        width: 42%;
-        vertical-align: top;
-        
-       }
+        @include bp-large {
+            display: inline-block;
+            width: 42%;
+            vertical-align: top;
+        }
     }
     .book_cover_page {
-    width: 80%;
- 		margin: 10px auto;
- 		padding-top: 20px;
- 		text-align: center;
- 		img{
- 			width: 70%;
- 			height:400px;
- 			min-width: 280px;
- 			max-width: 400px;
- 		}
- 		 button{
-			display: block;
-			background-color: #ffff00;
-			border-radius: 3px;
-			border: none;
-			font-weight: bold;
-			text-transform: uppercase;
-			font-size: 15px;
-			margin: 10px auto;
-			width: 200px;
-			height: 30px;
-			line-height: 30px;
-			cursor: pointer;
-			box-shadow: inset -3px -3px 3px #aaa;
-        }
-        @media (min-width: 1024px) {
-        	display: inline-block;
-        width: 32%;
-        vertical-align: top;
+        width: 80%;
+        margin: 10px auto;
+        padding-top: 20px;
         text-align: center;
-        img{
-        	width: 320px;
-        height: 450px;
+        img {
+            width: 70%;
+            height: 400px;
+            min-width: 280px;
+            max-width: 400px;
         }
-       
-
+        button {
+            display: block;
+            background-color: #ffff00;
+            @include border-radius(3px);
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-family: "acumin-pro-condensed", sans-serif;
+            margin: 10px auto;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+            @include box-shadow(-3px, -3px, 3px, #aaa);
+        }
+        @include bp-large {
+            display: inline-block;
+            width: 32%;
+            vertical-align: top;
+            text-align: center;
+            img {
+                width: 320px;
+                height: 450px;
+            }
         }
     }
 }
@@ -219,18 +284,33 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-.list_items{
-	border-left: 3px solid #29a3a3;
-	margin-bottom: 20px;
-	padding: 0 10px;
-	span{
-		font-weight: bold;
-		font-style: italic;
-		color: #29a3a3;
-		font-size: 15px;
-	}
-	h2{
-		font-weight: bold;
-		font-size: 18px;
-	}
+
+.list_items {
+    border-left: 3px solid #29a3a3;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    span {
+        font-weight: bold;
+        font-style: italic;
+        color: #29a3a3;
+        font-size: 15px;
+        font-family: 'acumin-pro';
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 18px;
+        font-family: "acumin-pro-condensed", sans-serif;
+    }
+}
+.clear {
+    clear: both;
+}
+#overlay {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    position: absolute;
+    top: 0;
 }

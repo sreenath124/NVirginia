@@ -19,49 +19,105 @@ header #logo {
   header #logo h1 {
     display: inline-block;
     line-height: 80px;
-    font-size: 35px; }
+    font-size: 35px;
+    font-family: "acumin-pro-extra-condensed", sans-serif; }
   header #logo #icons_container {
     float: right;
     margin: 30px 20px; }
     header #logo #icons_container .icons {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       color: #fff;
-      padding: 2px 2px;
-      border-radius: 50%; }
+      border-radius: 50%;
+      line-height: 25px; }
+    header #logo #icons_container #facebook,
+    header #logo #icons_container #twitter,
+    header #logo #icons_container #instagram {
+      display: none; }
+      @media (min-width: 1024px) {
+        header #logo #icons_container #facebook,
+        header #logo #icons_container #twitter,
+        header #logo #icons_container #instagram {
+          display: inline-block; } }
     header #logo #icons_container #facebook {
       background-color: #3b5998; }
     header #logo #icons_container #twitter {
       background-color: #00aced; }
     header #logo #icons_container #instagram {
-      background-color: #0080ff; }
+      background-color: #1568bb; }
     header #logo #icons_container #search {
       color: #ddd; }
-header nav {
-  text-align: center;
-  border-top: 1px solid #aaa; }
-  header nav ul li {
+header #horizontal_nav {
+  text-align: center; }
+  @media (min-width: 1024px) {
+    header #horizontal_nav {
+      border-top: 1px solid #aaa; } }
+  header #horizontal_nav #menu_button {
+    color: #29a3a3;
+    float: left;
+    margin-top: -53px;
+    margin-left: 15px; }
+    @media (min-width: 1024px) {
+      header #horizontal_nav #menu_button {
+        display: inline-block;
+        margin: 30px; } }
+  header #horizontal_nav ul li {
     display: inline-block;
     cursor: pointer; }
-  header nav #main_nav {
-    padding: 10px 0; }
-    header nav #main_nav #menu_button {
-      color: #29a3a3;
-      padding-right: 20px; }
-    header nav #main_nav li {
-      font-size: 24px;
-      padding-right: 20px; }
-      header nav #main_nav li a {
-        font-family: 'AcuminProExtraCond'; }
-  header nav #sub_nav {
+  header #horizontal_nav #main_nav {
+    display: none; }
+    @media (min-width: 1024px) {
+      header #horizontal_nav #main_nav {
+        padding: 10px 0;
+        display: inline-block; }
+        header #horizontal_nav #main_nav li {
+          padding-right: 20px; }
+          header #horizontal_nav #main_nav li a {
+            font-family: "acumin-pro-extra-condensed", sans-serif;
+            font-size: 40px; } }
+  header #horizontal_nav #sub_nav {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     padding: 10px 0; }
-    header nav #sub_nav li {
+    header #horizontal_nav #sub_nav li {
       font-size: 12px;
       padding-right: 20px; }
-      header nav #sub_nav li a {
-        color: #aaa; }
+      header #horizontal_nav #sub_nav li a {
+        color: #aaa;
+        font-family: 'acumin-pro'; }
+header #side_nav {
+  display: none;
+  background-color: #fff;
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  padding: 20px; }
+  header #side_nav h3 {
+    display: inline-block;
+    color: #29a3a3; }
+  header #side_nav #close_button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    float: right; }
+  header #side_nav ul {
+    padding: 20px 0; }
+    header #side_nav ul li {
+      border-bottom: 1px solid #ddd;
+      padding: 8px;
+      font-size: 16px; }
+      header #side_nav ul li:last-child {
+        border: none; }
+    header #side_nav ul i {
+      float: right;
+      background-color: #fff;
+      color: #aaa;
+      border: 1px solid #ddd;
+      padding: 0 3px;
+      text-transform: none; }
 
 article {
   margin: 0 auto; }
@@ -70,29 +126,37 @@ footer {
   text-align: center;
   border-top: 1px solid #ddd; }
   footer nav {
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     padding: 20px 0; }
     footer nav ul {
-      display: inline-block;
-      width: 45%;
-      vertical-align: top; }
-      footer nav ul h4 {
-        text-align: left; }
+      width: 100%;
+      text-align: center;
+      padding-bottom: 10px; }
       footer nav ul li {
-        text-align: left;
-        padding: 5px 0; }
-      @media (min-width: 1024px) {
+        padding: 2px 0;
+        font-family: 'acumin-pro'; }
+      @media (min-width: 768px) {
         footer nav ul {
           display: inline-block;
+          text-align: left;
+          width: auto;
           vertical-align: top;
-          padding: 0 40px; } }
+          padding: 0 40px; }
+          footer nav ul:last-child {
+            margin: 0;
+            padding-right: 0; } }
     footer nav #subscription {
-      padding-top: 20px; }
-  footer h5 {
+      padding-top: 10px; }
+      @media (min-width: 1024px) {
+        footer nav #subscription {
+          padding-top: 20px; } }
+  footer p {
     padding: 20px 0;
     border-top: 1px solid #ddd;
-    text-align: center; }
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase; }
 
 .content {
   padding-bottom: 40px; }
@@ -100,24 +164,28 @@ footer {
     text-align: center;
     padding: 20px 0 30px; }
     .content .image img {
-      height: 80px; }
+      height: 80px;
+      max-width: 500px;
+      width: 90%; }
   .content .date {
     width: 80%;
     margin: 10px auto;
-    padding-top: 20px; }
+    padding-top: 20px;
+    font-family: 'acumin-pro-wide'; }
     @media (min-width: 1024px) {
       .content .date {
         display: inline-block;
         width: 20%;
         vertical-align: top; }
-        .content .date h2, .content .date span {
+        .content .date h2,
+        .content .date span {
           font-size: 25px;
           display: block;
           font-weight: bold;
           text-align: right;
           padding-right: 10px; } }
   .content .stories {
-    width: 100%;
+    width: 80%;
     margin: 10px auto;
     padding-top: 20px; }
     .content .stories ul li ul li {
@@ -140,16 +208,21 @@ footer {
     .content .book_cover_page button {
       display: block;
       background-color: #ffff00;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
       border-radius: 3px;
       border: none;
       font-weight: bold;
       text-transform: uppercase;
       font-size: 15px;
+      font-family: "acumin-pro-condensed", sans-serif;
       margin: 10px auto;
       width: 200px;
       height: 30px;
       line-height: 30px;
       cursor: pointer;
+      -webkit-box-shadow: inset -3px -3px 3px #aaa;
+      -moz-box-shadow: inset -3px -3px 3px #aaa;
       box-shadow: inset -3px -3px 3px #aaa; }
     @media (min-width: 1024px) {
       .content .book_cover_page {
@@ -167,15 +240,29 @@ footer {
 
 .list_items {
   border-left: 3px solid #29a3a3;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 0 10px; }
   .list_items span {
     font-weight: bold;
     font-style: italic;
     color: #29a3a3;
-    font-size: 15px; }
+    font-size: 15px;
+    font-family: 'acumin-pro'; }
   .list_items h2 {
     font-weight: bold;
-    font-size: 18px; }
+    font-size: 18px;
+    font-family: "acumin-pro-condensed", sans-serif; }
+
+.clear {
+  clear: both; }
+
+#overlay {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  position: absolute;
+  top: 0; }
 
 /*# sourceMappingURL=style.css.map */

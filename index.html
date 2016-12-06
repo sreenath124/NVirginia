@@ -5,6 +5,8 @@
     <title>NVirginia</title>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+     <script src="https://use.typekit.net/lib4jwy.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body>
@@ -13,17 +15,30 @@
             <div id="logo" class="max_width">
                 <h1>NorthenVirginia</h1>
                 <div id="icons_container">
-                    <i id="facebook" class="fa fa-facebook fa-1g icons" aria-hidden="true"></i>
-                    <i id="twitter" class="fa fa-twitter icons" aria-hidden="true"></i>
-                    <i id="instagram" class="fa fa-instagram icons" aria-hidden="true"></i>
-                    <i id="search" class="fa fa-search " aria-hidden="true"></i>
+                    <a><i id="facebook" class="fa fa-facebook fa-1g icons" aria-hidden="true"></i></a>
+                    <a><i id="twitter" class="fa fa-twitter icons" aria-hidden="true"></i></a>
+                    <a><i id="instagram" class="fa fa-instagram icons" aria-hidden="true"></i></a>
+                    <a><i id="search" class="fa fa-search " aria-hidden="true"></i></a>
                 </div>
             </div>
-            <nav >
+            <div id="overlay"></div>
+            <nav id="side_nav">
+            	<h3>NorthenVirginia</h3>
+            	<button id="close_button">X</button>
+            		<ul>
+            			<li><a href="">FOOD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            			<li><a href="">CULTURE</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            			<li><a href="">SHOPPING</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            			<li><a href="">HOME</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            			<li><a href="">FAMILY</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            			<li><a href="">HEALTH</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            			<li><a href="">THINGS TO DO</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            			<li><a href="">MAGAZINE</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+            		</ul>
+            </nav>
+            <nav id="horizontal_nav" class="clear">
+                     <i id="menu_button" class="fa fa-bars fa-2x" aria-hidden="true"></i>
                 <ul id="main_nav" class="max_width">
-                    <a href="">
-                        <i id="menu_button" class="fa fa-bars fa-1g" aria-hidden="true"></i>
-                    </a>
                     <li><a href="">food</a></li>
                     <li><a href="">culture</a></li>
                     <li><a href="">style</a></li>
@@ -45,7 +60,7 @@
         </header>
         <article class="content max_width">
         	<section class="image">
-        		<img src="assets/api2.png"/>
+        		<img src="assets/banner.png"/>
         	</section>
             <section class="date">
             <h2>AUGUST </h2>
@@ -98,7 +113,7 @@
                         <p>by koo hwangbo</p>
                     </li>
                     <li id="style" class="list_items">
-                        <span>Style</span>list_items
+                        <span>Style</span>
                         <h2><a>shop talk: tsalt</a></h2>
                         <p>by angel bobo</p>
                     </li>
@@ -110,7 +125,7 @@
                 </ul>
             </section>
             <section class="book_cover_page">
-            	<img src="assets/api.png">
+            	<img src="assets/book_cover.png">
             	<button>Buy this issue</button>
             	<button>subscribe</button>
             	<button>past issues</button>
@@ -154,15 +169,15 @@
                 <ul id="news_stand">
                 <h4>On News stand now!</h4>
                 	<li>
-                		<img src="assets/api1.png">
+                		<img src="assets/magazine.png">
                 	</li>
                 </ul>
             </nav>
-            <h5 id="copyright">copyright &copy; 2016 northen virginia magazine</h5>
+            <p id="copyright">copyright &copy; 2016 northen virginia magazine</p>
         </footer>
     </section>
-    <script src="https://use.typekit.net/lib4jwy.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 
 </html>
