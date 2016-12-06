@@ -5,12 +5,15 @@
 
 a {
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #000; }
 
 li {
   list-style: none;
-  text-transform: uppercase;
   font-size: 10px; }
+
+li, button {
+  text-transform: uppercase; }
 
 header #logo {
   text-align: center;
@@ -62,8 +65,7 @@ header #horizontal_nav {
         position: static;
         margin: 30px; } }
   header #horizontal_nav ul li {
-    display: inline-block;
-    cursor: pointer; }
+    display: inline-block; }
   header #horizontal_nav #main_nav {
     display: none; }
     @media (min-width: 1024px) {
@@ -201,9 +203,9 @@ footer {
     padding-top: 20px;
     text-align: center; }
     .content .book_cover_page img {
-      width: 70%;
       height: auto;
-      max-width: 380px; }
+      max-width: 350px;
+      width: 60%; }
     .content .book_cover_page button {
       display: block;
       background-color: #ffff00;
@@ -212,7 +214,6 @@ footer {
       border-radius: 3px;
       border: none;
       font-weight: bold;
-      text-transform: uppercase;
       font-size: 15px;
       font-family: "acumin-pro-condensed", sans-serif;
       margin: 10px auto;
@@ -228,10 +229,7 @@ footer {
         display: inline-block;
         width: 32%;
         vertical-align: top;
-        text-align: center; }
-        .content .book_cover_page img {
-          width: 320px;
-          height: 450px; } }
+        text-align: center; } }
 
 .max_width {
   max-width: 1200px;
