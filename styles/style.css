@@ -5,7 +5,6 @@
 
 a {
   text-decoration: none;
-  color: #000;
   cursor: pointer; }
 
 li {
@@ -54,12 +53,13 @@ header #horizontal_nav {
       border-top: 1px solid #aaa; } }
   header #horizontal_nav #menu_button {
     color: #29a3a3;
-    float: left;
-    margin-top: -53px;
-    margin-left: 15px; }
+    position: absolute;
+    top: 24px;
+    left: 15px; }
     @media (min-width: 1024px) {
       header #horizontal_nav #menu_button {
         display: inline-block;
+        position: static;
         margin: 30px; } }
   header #horizontal_nav ul li {
     display: inline-block;
@@ -164,9 +164,9 @@ footer {
     text-align: center;
     padding: 20px 0 30px; }
     .content .image img {
-      height: 80px;
       max-width: 500px;
-      width: 90%; }
+      width: 90%;
+      height: auto; }
   .content .date {
     width: 80%;
     margin: 10px auto;
@@ -202,9 +202,8 @@ footer {
     text-align: center; }
     .content .book_cover_page img {
       width: 70%;
-      height: 400px;
-      min-width: 280px;
-      max-width: 400px; }
+      height: auto;
+      max-width: 380px; }
     .content .book_cover_page button {
       display: block;
       background-color: #ffff00;

@@ -7,7 +7,6 @@
 
 a {
     text-decoration: none;
-    color: #000;
     cursor: pointer;
 }
 
@@ -66,11 +65,12 @@ header {
   		}
         #menu_button {
             color: #29a3a3;
-            float: left;
-    margin-top: -53px;
-    margin-left: 15px;
+            position: absolute;
+            top: 24px;
+            left: 15px;
             @include bp-large {
             	display: inline-block;
+                position: static;
                 margin: 30px;
             }
         }
@@ -203,9 +203,9 @@ footer {
         text-align: center;
         padding: 20px 0 30px;
         img {
-            height: 80px;
             max-width: 500px;
             width: 90%;
+            height: auto;
         }
     }
     .date {
@@ -247,9 +247,8 @@ footer {
         text-align: center;
         img {
             width: 70%;
-            height: 400px;
-            min-width: 280px;
-            max-width: 400px;
+            height: auto;
+            max-width: 380px;
         }
         button {
             display: block;
