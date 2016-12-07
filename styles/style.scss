@@ -27,8 +27,10 @@ header {
         h1 {
             display: inline-block;
             line-height: 80px;
+            position: relative;
+            left: 8%;
             font-size: 48px;
-            font-family: "acumin-pro-extra-condensed", sans-serif;
+            font-family: $acumin_pro_xcond;
             color: $category_title;
         }
         #icons_container {
@@ -66,10 +68,10 @@ header {
     #horizontal_nav {
         text-align: center;
   		@include bp-large {
-  			border-top: 1px solid #aaa;
+  			border-top: 1px solid $light_grey;
   		}
         #menu_button {
-            color: #29a3a3;
+            color: $category_title;
             position: absolute;
             top: 24px;
             left: 15px;
@@ -92,7 +94,7 @@ header {
                 li {
                     padding-right: 20px;
                     a {
-                        font-family: "acumin-pro-extra-condensed", sans-serif;
+                        font-family: $acumin_pro_xcond;
                         font-size: 40px;
                     }
                 }
@@ -106,8 +108,8 @@ header {
                 font-size: 12px;
                 padding-right: 20px;
                 a {
-                    color: #aaa;
-                    font-family: 'acumin-pro';
+                    color: $light_grey;
+                    font-family: $acumin_pro;
                 }
             }
         }
@@ -146,7 +148,7 @@ header {
             i {
                 float: right;
                 background-color: $white;
-                color: #aaa;
+                color: $light_grey;
                 border: 1px solid $section_border;
                 padding: 0 3px;
                 text-transform: none;
@@ -173,7 +175,7 @@ footer {
             padding-bottom: 10px;
             li {
                 padding: 2px 0;
-                font-family: 'acumin-pro';
+                font-family: $acumin_pro;
             }
             @include bp-medium {
                 display: inline-block;
@@ -223,10 +225,9 @@ footer {
         width: 80%;
         margin: 10px auto;
         padding-top: 20px;
-        font-family: 'acumin-pro-wide';
+        font-family: $acumin_pro_w;
         @include bp-large {
             flex: 1;
-            // width: 20%;
             vertical-align: top;
             h2,
             span {
@@ -247,7 +248,6 @@ footer {
         }
         @include bp-large {
             flex: 2;
-            // width: 42%;
             vertical-align: top;
         }
     }
@@ -268,17 +268,16 @@ footer {
             border: none;
             font-weight: bold;
             font-size: 15px;
-            font-family: "acumin-pro-condensed", sans-serif;
+            font-family: $acumin_pro_cond;
             margin: 10px auto;
             width: 200px;
             height: 30px;
             line-height: 30px;
             cursor: pointer;
-            @include box-shadow(-3px, -3px, 3px, #aaa);
+            @include box-shadow(-3px, -3px, 3px, $light_grey);
         }
         @include bp-large {
             flex: 2;
-            // width: 32%;
             vertical-align: top;
             text-align: center;
         }
@@ -300,12 +299,12 @@ footer {
         font-style: italic;
         color: $category_title;
         font-size: 15px;
-        font-family: 'acumin-pro';
+        font-family: $acumin_pro;
     }
     h2 {
         font-weight: bold;
         font-size: 18px;
-        font-family: "acumin-pro-condensed", sans-serif;
+        font-family: $acumin_pro_cond;
     }
 }
 .clear {

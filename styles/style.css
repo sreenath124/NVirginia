@@ -22,6 +22,8 @@ header #logo {
   header #logo h1 {
     display: inline-block;
     line-height: 80px;
+    position: relative;
+    left: 8%;
     font-size: 48px;
     font-family: "acumin-pro-extra-condensed", sans-serif;
     color: #29a3a3; }
@@ -88,7 +90,7 @@ header #horizontal_nav {
       padding-right: 20px; }
       header #horizontal_nav #sub_nav li a {
         color: #aaa;
-        font-family: 'acumin-pro'; }
+        font-family: "acumin-pro"; }
 header #side_nav {
   display: none;
   background-color: #fff;
@@ -141,7 +143,7 @@ footer {
       padding-bottom: 10px; }
       footer nav ul li {
         padding: 2px 0;
-        font-family: 'acumin-pro'; }
+        font-family: "acumin-pro"; }
       @media (min-width: 768px) {
         footer nav ul {
           display: inline-block;
@@ -180,7 +182,7 @@ footer {
     width: 80%;
     margin: 10px auto;
     padding-top: 20px;
-    font-family: 'acumin-pro-wide'; }
+    font-family: "acumin-pro-wide"; }
     @media (min-width: 1024px) {
       .content .inner_contents .date {
         flex: 1;
@@ -248,7 +250,7 @@ footer {
     font-style: italic;
     color: #29a3a3;
     font-size: 15px;
-    font-family: 'acumin-pro'; }
+    font-family: "acumin-pro"; }
   .list_items h2 {
     font-weight: bold;
     font-size: 18px;
