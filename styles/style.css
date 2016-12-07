@@ -62,7 +62,8 @@ header #horizontal_nav {
     color: #29a3a3;
     position: absolute;
     top: 24px;
-    left: 15px; }
+    left: 15px;
+    cursor: pointer; }
     @media (min-width: 1024px) {
       header #horizontal_nav #menu_button {
         display: inline-block;
