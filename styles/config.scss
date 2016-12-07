@@ -11,8 +11,10 @@ $category_title: #29a3a3;
 $yellow: #ffff00;
 $acumin_pro: 'acumin-pro';
 $acumin_pro_w: 'acumin-pro-wide';
-$acumin_pro_cond: "acumin-pro-condensed",sans-serif;
-$acumin_pro_xcond:"acumin-pro-extra-condensed",sans-serif;
+$acumin_pro_cond: "acumin-pro-condensed",
+sans-serif;
+$acumin_pro_xcond:"acumin-pro-extra-condensed",
+sans-serif;
 $tablet_size: 768px;
 $desktop_size: 1024px;
 //mixins....
@@ -38,6 +40,14 @@ $desktop_size: 1024px;
     display: flex;
 }
 
+@mixin transition($transition_property, $transition_time, $method){
+	-webkit-transition: $transition_property $transition_time  $method;
+	-moz-transition: $transition_property $transition_time  $method;
+	-ms-transition: $transition_property $transition_time  $method;
+	-o-transition: $transition_property $transition_time  $method;
+	transition: $transition_property $transition_time  $method;
+}
+
 @mixin bp-medium {
     @media (min-width: $tablet_size) {
         @content;
@@ -49,4 +59,3 @@ $desktop_size: 1024px;
         @content;
     }
 }
-
