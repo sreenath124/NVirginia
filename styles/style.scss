@@ -15,23 +15,26 @@ li {
     list-style: none;
     font-size: 10px;
 }
-li,button {
-	text-transform: uppercase;
-	color: $black;
+
+li,
+button {
+    text-transform: uppercase;
+    color: $black;
 }
 
 header {
     #logo {
         text-align: center;
         height: 80px;
-        h1 {
+        a {
             display: inline-block;
-            line-height: 80px;
-            position: relative;
             left: 8%;
-            font-size: 48px;
-            font-family: $acumin_pro_xcond;
-            color: $category_title;
+            position: relative;
+            h1 {
+                line-height: 80px;
+                font: bolder 48px $acumin_pro_xcond;
+                color: $category_title;
+            }
         }
         #icons_container {
             float: right;
@@ -40,7 +43,7 @@ header {
                 width: 25px;
                 height: 25px;
                 color: $white;
-                border-radius: 50%;
+                @include border-radius(50%);
                 line-height: 25px;
             }
             #facebook,
@@ -48,7 +51,7 @@ header {
             #instagram {
                 display: none;
                 @include bp-large {
-                	display: inline-block;
+                    display: inline-block;
                 }
             }
             #facebook {
@@ -67,9 +70,9 @@ header {
     }
     #horizontal_nav {
         text-align: center;
-  		@include bp-large {
-  			border-top: 1px solid $light_grey;
-  		}
+        @include bp-large {
+            border-top: 1px solid $light_grey;
+        }
         #menu_button {
             color: $category_title;
             position: absolute;
@@ -77,9 +80,9 @@ header {
             left: 15px;
             cursor: pointer;
             @include bp-large {
-            	display: inline-block;
+                display: inline-block;
                 position: static;
-                margin: 30px;
+                margin: 25px;
             }
         }
         ul {
@@ -115,46 +118,60 @@ header {
             }
         }
     }
-    #side_nav {
-        display: none;
-        background-color: $white;
-        width: 250px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: 4;
-        padding: 20px;
-        h3 {
-            display: inline-block;
-            color: $category_title;
-        }
-        #close_button {
-            border: none;
-            background-color: $black;
-            color: $white;
-            padding: 5px;
-            float: right;
-            cursor: pointer;
-        }
-        ul {
-            padding: 20px 0;
-            li {
-                border-bottom: 1px solid $section_border;
-                padding: 8px;
-                font-size: 16px;
-                &:last-child {
-                    border: none;
-                }
+    .side_container {
+        .side_nav {
+            background-color: $white;
+            height: 100vh;
+            width: 250px;
+            position: absolute;
+            top: 0;
+            z-index: 4;
+            padding: 20px;
+            transition: all .5s ease;
+            h3 {
+                display: inline-block;
+                color: $category_title;
             }
-            i {
-                float: right;
-                background-color: $white;
-                color: $light_grey;
-                border: 1px solid $section_border;
-                padding: 0 3px;
-                text-transform: none;
+            #close_button {
+                border: none;
+                background-color: $black;
+                color: $white;
+                padding: 5px;
+                position: absolute;
+                right: 30px;
                 cursor: pointer;
             }
+            ul {
+                padding: 20px 0;
+                li {
+                    border-bottom: 1px solid $section_border;
+                    padding: 8px;
+                    font-size: 16px;
+                    &:last-child {
+                        border: none;
+                    }
+                    a {
+                        display: block;
+                    }
+                }
+                i {
+                    position: absolute;
+                    right: 30px;
+                    background-color: $white;
+                    color: $light_grey;
+                    border: 1px solid $section_border;
+                    padding: 0 3px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .overlay {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 3;
+            position: absolute;
+            top: 0;
         }
     }
 }
@@ -215,75 +232,69 @@ footer {
             max-width: 500px;
             width: 90%;
             height: auto;
+            min-height: 50px;
         }
     }
- 	.inner_contents{
- 		@include bp-large {
- 			display: flex;
- 		}
- 		   
- 		   .date {
-        width: 80%;
-        margin: 10px auto;
-        padding-top: 20px;
-        font-family: $acumin_pro_w;
+    .inner_contents {
         @include bp-large {
-            flex: 1;
-            vertical-align: top;
-            h2,
-            span {
-                font-size: 25px;
+            @include flex-box;
+        }
+        .date {
+            width: 80%;
+            margin: 10px auto;
+            padding-top: 20px;
+            font-family: $acumin_pro_w;
+            @include bp-large {
+                flex: 1;
+                h2,
+                span {
+                    display: block;
+                    font: bold 25px;
+                    text-align: right;
+                    padding-right: 10px;
+                }
+            }
+        }
+        .stories {
+            width: 80%;
+            margin: 10px auto;
+            padding-top: 20px;
+            ul li ul li {
+                padding-bottom: 8px;
+            }
+            @include bp-large {
+                flex: 2;
+            }
+        }
+        .book_cover_page {
+            width: 80%;
+            margin: 10px auto;
+            padding-top: 20px;
+            text-align: center;
+            img {
+                height: auto;
+                max-width: 350px;
+                width: 60%;
+            }
+            button {
                 display: block;
-                font-weight: bold;
-                text-align: right;
-                padding-right: 10px;
+                background-color: $yellow;
+                @include border-radius(3px);
+                border: none;
+                font: bold 15px $acumin_pro_cond;
+                margin: 10px auto;
+                width: 200px;
+                height: 30px;
+                line-height: 30px;
+                cursor: pointer;
+                @include box-shadow(-3px, -3px, 3px, $light_grey);
+            }
+            @include bp-large {
+                flex: 2;
+                text-align: center;
             }
         }
     }
-    .stories {
-        width: 80%;
-        margin: 10px auto;
-        padding-top: 20px;
-        ul li ul li {
-            padding-bottom: 8px;
-        }
-        @include bp-large {
-            flex: 2;
-            vertical-align: top;
-        }
-    }
-    .book_cover_page {
-        width: 80%;
-        margin: 10px auto;
-        padding-top: 20px;
-        text-align: center;
-        img {
-            height: auto;
-            max-width: 350px;
-            width: 60%;
-        }
-        button {
-            display: block;
-            background-color: $yellow;
-            @include border-radius(3px);
-            border: none;
-            font-weight: bold;
-            font-size: 15px;
-            font-family: $acumin_pro_cond;
-            margin: 10px auto;
-            width: 200px;
-            height: 30px;
-            line-height: 30px;
-            cursor: pointer;
-            @include box-shadow(-3px, -3px, 3px, $light_grey);
-        }
-        @include bp-large {
-            flex: 2;
-            vertical-align: top;
-            text-align: center;
-        }
-    }
- 	}
 }
 
 .max_width {
@@ -296,27 +307,39 @@ footer {
     margin-bottom: 30px;
     padding: 0 10px;
     span {
-        font-weight: bold;
-        font-style: italic;
         color: $category_title;
-        font-size: 15px;
-        font-family: $acumin_pro;
+        font: italic bold 15px $acumin_pro
     }
     h2 {
-        font-weight: bold;
-        font-size: 18px;
-        font-family: $acumin_pro_cond;
+        font: bold 18px $acumin_pro_cond;
     }
 }
+
 .clear {
     clear: both;
 }
-#overlay {
-    display: none;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 3;
-    position: absolute;
-    top: 0;
+
+.overlay_hidden {
+    overflow: auto;
+    .side_container {
+        .side_nav {
+            left: -250px;
+        }
+        .overlay {
+            display: none;
+        }
+    }
+}
+
+.overlay_visible {
+    overflow: hidden;
+    .side_container {
+        .side_nav {
+            left: 0;
+        }
+        .overlay {
+            display: block;
+            overflow: hidden;
+        }
+    }
 }

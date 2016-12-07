@@ -6,15 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-     <script src="https://use.typekit.net/lib4jwy.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="https://use.typekit.net/lib4jwy.js"></script>
+    <script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+    </script>
 </head>
 
-<body>
+<body class="overlay_hidden">
     <section class="wrapper">
         <header>
             <div id="logo" class="max_width">
-                <h1>NorthenVirginia</h1>
+                <a>
+                    <h1>NorthenVirginia</h1></a>
                 <div id="icons_container">
                     <a><i id="facebook" class="fa fa-facebook fa-1g icons" aria-hidden="true"></i></a>
                     <a><i id="twitter" class="fa fa-twitter icons" aria-hidden="true"></i></a>
@@ -22,23 +29,25 @@
                     <a><i id="search" class="fa fa-search " aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div id="overlay"></div>
-            <nav id="side_nav">
-            	<h3>NorthenVirginia</h3>
-            	<button id="close_button">X</button>
-            		<ul>
-            			<li><a href="">FOOD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            			<li><a href="">CULTURE</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            			<li><a href="">SHOPPING</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            			<li><a href="">HOME</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            			<li><a href="">FAMILY</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            			<li><a href="">HEALTH</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            			<li><a href="">THINGS TO DO</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            			<li><a href="">MAGAZINE</a><i class="fa fa-angle-down" aria-hidden="true"></i></li>
-            		</ul>
-            </nav>
+            <div class="side_container overlay_hidden">
+                <div class="overlay"></div>
+                <nav class="side_nav a">
+                    <h3>NorthenVirginia</h3>
+                    <button id="close_button">X</button>
+                    <ul>
+                        <li><a href="">FOOD<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">CULTURE<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">SHOPPING<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">HOME<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">FAMILY<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">HEALTH<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">THINGS TO DO<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">MAGAZINE<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
             <nav id="horizontal_nav" class="clear">
-                     <i id="menu_button" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                <i id="menu_button" class="fa fa-bars fa-2x" aria-hidden="true"></i>
                 <ul id="main_nav" class="max_width">
                     <li><a href="">food</a></li>
                     <li><a href="">culture</a></li>
@@ -60,78 +69,96 @@
             </nav>
         </header>
         <article class="content max_width">
-        	<section class="image">
-        		<img src="assets/banner.png"/>
-        	</section>
+            <section class="image">
+                <img src="assets/banner.png" alt="banner">
+            </section>
             <section class="inner_contents">
-            	<section class="date">
-            <h2>AUGUST </h2>
-            <span>2016</span>
-            </section>
-            <section class="stories">
-                <ul>
-                    <li id="cover_story" class="list_items">
-                        <span>Cover Story</span>
-                        <h2><a>Fairs and Festivals</a></h2>
-                        <p>By Raquel desouza
-                    </li>
-                    <li id="features" class="list_items">
-                        <span>Features</span>
-                        <ul>
-                            <li>
-                                <h2><a>36 Days of summer</a></h2>
-                                <p>by koo hwangbo and lynn nurosis</p>
-                            </li>
-                            <li>
-                                <h2><a>Hospitals helping keep workers fit</a></h2>
-                                <p>By victoria finkle</p>
-                            </li>
-                            <li>
-                                <h2><a>back to school</a></h2>
-                                <p>by savannah behramann</p>
-                            </li>
-                            <li>
-                                <h2><a>guide to college apps</a></h2>
-                                <p>by katie bowles</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li id="buzz" class="list_items">
-                        <span>buzz</span>
-                        <ul>
-                            <li>
-                                <h2><a>Monica the medium</a></h2>
-                                <p>by koo hwangbo</p>
-                            </li>
-                            <li>
-                                <h2><a>torpedo factory mangement misfires</a></h2>
-                                <p>by david hodes</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li id="datebook" class="list_items">
-                        <span>datebook</span>
-                        <h2><a>sam grow at tally ho theatre</a></h2>
-                        <p>by koo hwangbo</p>
-                    </li>
-                    <li id="style" class="list_items">
-                        <span>Style</span>
-                        <h2><a>shop talk: tsalt</a></h2>
-                        <p>by angel bobo</p>
-                    </li>
-                    <li id="voices" class="list_items">
-                        <span>voices</span>
-                        <h2><a>city sprawl: everyone and thier brother</a></h2>
-                        <p>by susan anspach</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="book_cover_page">
-            	<img src="assets/book_cover.png">
-            	<button>Buy this issue</button>
-            	<button>subscribe</button>
-            	<button>past issues</button>
-            </section>
+                <section class="date">
+                    <h2>AUGUST </h2>
+                    <span>2016</span>
+                </section>
+                <section class="stories">
+                    <ul>
+                        <li id="cover_story" class="list_items">
+                            <span>Cover Story</span>
+                            <h2><a>Fairs and Festivals</a></h2>
+                            <p>By Raquel desouza
+                        </li>
+                        <li id="features" class="list_items">
+                            <span>Features</span>
+                            <ul>
+                                <li>
+                                    <h2>
+                                    	<a>36 Days of summer</a>
+                                    </h2>
+                                    <p>by koo hwangbo and lynn nurosis</p>
+                                </li>
+                                <li>
+                                    <h2>
+                                    	<a>Hospitals helping keep workers fit</a>
+                                    </h2>
+                                    <p>By victoria finkle</p>
+                                </li>
+                                <li>
+                                    <h2>
+                                    	<a>back to school</a>
+                                    </h2>
+                                    <p>by savannah behramann</p>
+                                </li>
+                                <li>
+                                    <h2>
+                                    	<a>guide to college apps</a>
+                                    </h2>
+                                    <p>by katie bowles</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="buzz" class="list_items">
+                            <span>buzz</span>
+                            <ul>
+                                <li>
+                                    <h2>
+                                    	<a>Monica the medium</a>
+                                    </h2>
+                                    <p>by koo hwangbo</p>
+                                </li>
+                                <li>
+                                    <h2>
+                                    	<a>torpedo factory mangement misfires</a>
+                                    </h2>
+                                    <p>by david hodes</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="datebook" class="list_items">
+                            <span>datebook</span>
+                            <h2>
+                            	<a>sam grow at tally ho theatre</a>
+                            </h2>
+                            <p>by koo hwangbo</p>
+                        </li>
+                        <li id="style" class="list_items">
+                            <span>Style</span>
+                            <h2>
+                            	<a>shop talk: tsalt</a>
+                            </h2>
+                            <p>by angel bobo</p>
+                        </li>
+                        <li id="voices" class="list_items">
+                            <span>voices</span>
+                            <h2>
+                            	<a>city sprawl: everyone and thier brother</a>
+                            </h2>
+                            <p>by susan anspach</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="book_cover_page">
+                    <img src="assets/book_cover.png" alt="book_cover">
+                    <button>Buy this issue</button>
+                    <button>subscribe</button>
+                    <button>past issues</button>
+                </section>
             </section>
         </article>
         <footer>
@@ -170,17 +197,17 @@
                     <li><a href="">newsletters</a></li>
                 </ul>
                 <ul id="news_stand">
-                <h4>On News stand now!</h4>
-                	<li>
-                		<img src="assets/magazine.png">
-                	</li>
+                    <h4>On News stand now!</h4>
+                    <li>
+                        <img src="assets/magazine.png" alt="magazine">
+                    </li>
                 </ul>
             </nav>
             <p id="copyright">copyright &copy; 2016 northen virginia magazine</p>
         </footer>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 
 </html>

@@ -1,49 +1,52 @@
 //variables.....
-$white : #fff;
+$white: #fff;
 $black: #000;
-$light_grey : #aaa;
+$light_grey: #aaa;
 $facebook_bg_color: #3b5998;
-$twitter_bg_color : #00aced;
-$instagram_bg_color : #1568bb;
+$twitter_bg_color: #00aced;
+$instagram_bg_color: #1568bb;
 $search_button: #ddd;
-$section_border : #ddd;
-$category_title : #29a3a3;
-$yellow : #ffff00;
-
+$section_border: #ddd;
+$category_title: #29a3a3;
+$yellow: #ffff00;
 $acumin_pro: 'acumin-pro';
-$acumin_pro_w : 'acumin-pro-wide';
-$acumin_pro_cond :  "acumin-pro-condensed", sans-serif;
-$acumin_pro_xcond :"acumin-pro-extra-condensed", sans-serif;
-
-
-$tablet_size : 768px;
-$desktop_size : 1024px;
-
-
+$acumin_pro_w: 'acumin-pro-wide';
+$acumin_pro_cond: "acumin-pro-condensed",sans-serif;
+$acumin_pro_xcond:"acumin-pro-extra-condensed",sans-serif;
+$tablet_size: 768px;
+$desktop_size: 1024px;
 //mixins....
-
 @mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-          border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin box-shadow ($top, $left, $blur, $color) {
-	-webkit-box-shadow: inset $top $left $blur $color;
-	-moz-box-shadow: inset $top $left $blur $color;
-	box-shadow: inset $top $left $blur $color;
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+}
+
+@mixin flex-box {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
 }
 
 @mixin bp-medium {
-	@media (min-width: $tablet_size) {
-		@content;
-	}
+    @media (min-width: $tablet_size) {
+        @content;
+    }
 }
 
 @mixin bp-large {
-	@media (min-width: $desktop_size) {
-		@content;
-	}
+    @media (min-width: $desktop_size) {
+        @content;
+    }
 }
 
-//fonts...

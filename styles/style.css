@@ -12,21 +12,22 @@ li {
   list-style: none;
   font-size: 10px; }
 
-li, button {
+li,
+button {
   text-transform: uppercase;
   color: #000; }
 
 header #logo {
   text-align: center;
   height: 80px; }
-  header #logo h1 {
+  header #logo a {
     display: inline-block;
-    line-height: 80px;
-    position: relative;
     left: 8%;
-    font-size: 48px;
-    font-family: "acumin-pro-extra-condensed", sans-serif;
-    color: #29a3a3; }
+    position: relative; }
+    header #logo a h1 {
+      line-height: 80px;
+      font: bolder 48px "acumin-pro-extra-condensed", sans-serif;
+      color: #29a3a3; }
   header #logo #icons_container {
     float: right;
     margin: 30px 20px; }
@@ -34,6 +35,8 @@ header #logo {
       width: 25px;
       height: 25px;
       color: #fff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
       border-radius: 50%;
       line-height: 25px; }
     header #logo #icons_container #facebook,
@@ -68,7 +71,7 @@ header #horizontal_nav {
       header #horizontal_nav #menu_button {
         display: inline-block;
         position: static;
-        margin: 30px; } }
+        margin: 25px; } }
   header #horizontal_nav ul li {
     display: inline-block; }
   header #horizontal_nav #main_nav {
@@ -92,41 +95,51 @@ header #horizontal_nav {
       header #horizontal_nav #sub_nav li a {
         color: #aaa;
         font-family: "acumin-pro"; }
-header #side_nav {
-  display: none;
+header .side_container .side_nav {
   background-color: #fff;
+  height: 100vh;
   width: 250px;
-  height: 100%;
   position: absolute;
   top: 0;
   z-index: 4;
-  padding: 20px; }
-  header #side_nav h3 {
+  padding: 20px;
+  transition: all .5s ease; }
+  header .side_container .side_nav h3 {
     display: inline-block;
     color: #29a3a3; }
-  header #side_nav #close_button {
+  header .side_container .side_nav #close_button {
     border: none;
     background-color: #000;
     color: #fff;
     padding: 5px;
-    float: right;
+    position: absolute;
+    right: 30px;
     cursor: pointer; }
-  header #side_nav ul {
+  header .side_container .side_nav ul {
     padding: 20px 0; }
-    header #side_nav ul li {
+    header .side_container .side_nav ul li {
       border-bottom: 1px solid #ddd;
       padding: 8px;
       font-size: 16px; }
-      header #side_nav ul li:last-child {
+      header .side_container .side_nav ul li:last-child {
         border: none; }
-    header #side_nav ul i {
-      float: right;
+      header .side_container .side_nav ul li a {
+        display: block; }
+    header .side_container .side_nav ul i {
+      position: absolute;
+      right: 30px;
       background-color: #fff;
       color: #aaa;
       border: 1px solid #ddd;
       padding: 0 3px;
-      text-transform: none;
       cursor: pointer; }
+header .side_container .overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  position: absolute;
+  top: 0; }
 
 article {
   margin: 0 auto; }
@@ -175,9 +188,16 @@ footer {
     .content .image img {
       max-width: 500px;
       width: 90%;
-      height: auto; }
+      height: auto;
+      min-height: 50px; }
   @media (min-width: 1024px) {
     .content .inner_contents {
+      -ms-box-orient: horizontal;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
       display: flex; } }
   .content .inner_contents .date {
     width: 80%;
@@ -186,13 +206,11 @@ footer {
     font-family: "acumin-pro-wide"; }
     @media (min-width: 1024px) {
       .content .inner_contents .date {
-        flex: 1;
-        vertical-align: top; }
+        flex: 1; }
         .content .inner_contents .date h2,
         .content .inner_contents .date span {
-          font-size: 25px;
           display: block;
-          font-weight: bold;
+          font: bold 25px;
           text-align: right;
           padding-right: 10px; } }
   .content .inner_contents .stories {
@@ -203,8 +221,7 @@ footer {
       padding-bottom: 8px; }
     @media (min-width: 1024px) {
       .content .inner_contents .stories {
-        flex: 2;
-        vertical-align: top; } }
+        flex: 2; } }
   .content .inner_contents .book_cover_page {
     width: 80%;
     margin: 10px auto;
@@ -221,9 +238,7 @@ footer {
       -moz-border-radius: 3px;
       border-radius: 3px;
       border: none;
-      font-weight: bold;
-      font-size: 15px;
-      font-family: "acumin-pro-condensed", sans-serif;
+      font: bold 15px "acumin-pro-condensed", sans-serif;
       margin: 10px auto;
       width: 200px;
       height: 30px;
@@ -235,7 +250,6 @@ footer {
     @media (min-width: 1024px) {
       .content .inner_contents .book_cover_page {
         flex: 2;
-        vertical-align: top;
         text-align: center; } }
 
 .max_width {
@@ -247,26 +261,27 @@ footer {
   margin-bottom: 30px;
   padding: 0 10px; }
   .list_items span {
-    font-weight: bold;
-    font-style: italic;
     color: #29a3a3;
-    font-size: 15px;
-    font-family: "acumin-pro"; }
+    font: italic bold 15px "acumin-pro"; }
   .list_items h2 {
-    font-weight: bold;
-    font-size: 18px;
-    font-family: "acumin-pro-condensed", sans-serif; }
+    font: bold 18px "acumin-pro-condensed", sans-serif; }
 
 .clear {
   clear: both; }
 
-#overlay {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 3;
-  position: absolute;
-  top: 0; }
+.overlay_hidden {
+  overflow: auto; }
+  .overlay_hidden .side_container .side_nav {
+    left: -250px; }
+  .overlay_hidden .side_container .overlay {
+    display: none; }
+
+.overlay_visible {
+  overflow: hidden; }
+  .overlay_visible .side_container .side_nav {
+    left: 0; }
+  .overlay_visible .side_container .overlay {
+    display: block;
+    overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */
