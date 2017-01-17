@@ -28,8 +28,6 @@ header {
         height: 80px;
         a {
             display: inline-block;
-            left: 8%;
-            position: relative;
             h1 {
                 line-height: 80px;
                 font: bolder 48px $acumin_pro_xcond;
@@ -38,7 +36,7 @@ header {
         }
         #icons_container {
             float: right;
-            margin: 30px 20px;
+            margin: 30px 10px 0 0;
             .icons {
                 width: 25px;
                 height: 25px;

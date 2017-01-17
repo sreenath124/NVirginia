@@ -21,16 +21,14 @@ header #logo {
   text-align: center;
   height: 80px; }
   header #logo a {
-    display: inline-block;
-    left: 8%;
-    position: relative; }
+    display: inline-block; }
     header #logo a h1 {
       line-height: 80px;
       font: bolder 48px "acumin-pro-extra-condensed", sans-serif;
       color: #29a3a3; }
   header #logo #icons_container {
     float: right;
-    margin: 30px 20px; }
+    margin: 30px 10px 0 0; }
     header #logo #icons_container .icons {
       width: 25px;
       height: 25px;
