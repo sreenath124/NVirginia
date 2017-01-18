@@ -19,24 +19,35 @@ button {
 
 header #logo {
   text-align: center;
-  height: 80px; }
+  padding: 20px 0;
+  position: relative; }
   header #logo a {
     display: inline-block; }
     header #logo a h1 {
       line-height: 80px;
       font: bolder 48px "acumin-pro-extra-condensed", sans-serif;
       color: #29a3a3; }
+      @media (min-width: 1024px) {
+        header #logo a h1 {
+          font-size: 90px;
+          line-height: 50px; } }
   header #logo #icons_container {
-    float: right;
-    margin: 30px 10px 0 0; }
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
     header #logo #icons_container .icons {
-      width: 25px;
-      height: 25px;
+      width: 35px;
+      height: 35px;
       color: #fff;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
-      line-height: 25px; }
+      line-height: 35px; }
     header #logo #icons_container #facebook,
     header #logo #icons_container #twitter,
     header #logo #icons_container #instagram {
@@ -58,18 +69,19 @@ header #horizontal_nav {
   text-align: center; }
   @media (min-width: 1024px) {
     header #horizontal_nav {
-      border-top: 1px solid #aaa; } }
+      border-top: 1px solid #666666; } }
   header #horizontal_nav #menu_button {
     color: #29a3a3;
     position: absolute;
-    top: 24px;
+    top: 42px;
     left: 15px;
     cursor: pointer; }
     @media (min-width: 1024px) {
       header #horizontal_nav #menu_button {
         display: inline-block;
         position: static;
-        margin: 25px; } }
+        margin: 25px 0 25px 25px;
+        float: left; } }
   header #horizontal_nav ul li {
     display: inline-block; }
   header #horizontal_nav #main_nav {
@@ -79,10 +91,11 @@ header #horizontal_nav {
         padding: 10px 0;
         display: inline-block; }
         header #horizontal_nav #main_nav li {
-          padding-right: 20px; }
+          padding-right: 30px; }
           header #horizontal_nav #main_nav li a {
-            font-family: "acumin-pro-extra-condensed", sans-serif;
-            font-size: 40px; } }
+            font: 40px "acumin-pro-extra-condensed", sans-serif; }
+          header #horizontal_nav #main_nav li:last-child {
+            padding-right: 0; } }
   header #horizontal_nav #sub_nav {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -91,8 +104,8 @@ header #horizontal_nav {
       font-size: 12px;
       padding-right: 20px; }
       header #horizontal_nav #sub_nav li a {
-        color: #aaa;
-        font-family: "acumin-pro"; }
+        color: #666666;
+        font: 300 14px "acumin-pro"; }
 header .side_container .side_nav {
   background-color: #fff;
   height: 100vh;
@@ -131,7 +144,7 @@ header .side_container .side_nav {
       position: absolute;
       right: 30px;
       background-color: #fff;
-      color: #aaa;
+      color: #666666;
       border: 1px solid #ddd;
       padding: 0 3px;
       cursor: pointer; }
@@ -188,7 +201,7 @@ footer {
     text-align: center;
     padding: 20px 0 30px; }
     .content .image img {
-      max-width: 500px;
+      max-width: 700px;
       width: 90%;
       height: auto;
       min-height: 50px; }
@@ -233,26 +246,27 @@ footer {
       height: auto;
       max-width: 350px;
       width: 60%; }
-    .content .inner_contents .book_cover_page button {
-      display: block;
-      background-color: #ffff00;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      border: none;
-      font: bold 15px "acumin-pro-condensed", sans-serif;
-      margin: 10px auto;
-      width: 200px;
-      height: 30px;
-      line-height: 30px;
-      cursor: pointer;
-      -webkit-box-shadow: inset -3px -3px 3px #aaa;
-      -moz-box-shadow: inset -3px -3px 3px #aaa;
-      box-shadow: inset -3px -3px 3px #aaa; }
     @media (min-width: 1024px) {
       .content .inner_contents .book_cover_page {
         flex: 2;
         text-align: center; } }
+
+.button {
+  display: block;
+  background-color: #ffff00;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  font: bold 15px "acumin-pro-condensed", sans-serif;
+  margin: 10px auto;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  -webkit-box-shadow: inset -3px -3px 3px #666666;
+  -moz-box-shadow: inset -3px -3px 3px #666666;
+  box-shadow: inset -3px -3px 3px #666666; }
 
 .max_width {
   max-width: 1200px;

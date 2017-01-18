@@ -25,24 +25,36 @@ button {
 header {
     #logo {
         text-align: center;
-        height: 80px;
+        padding: 20px 0;
+        position: relative;
         a {
             display: inline-block;
             h1 {
                 line-height: 80px;
                 font: bolder 48px $acumin_pro_xcond;
                 color: $category_title;
+                 @include bp-large {
+                    font-size: 90px;
+                    line-height: 50px;
             }
+            }
+
         }
         #icons_container {
-            float: right;
-            margin: 30px 10px 0 0;
+            position: absolute;
+            top:50%;
+            right: 10px;
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
             .icons {
-                width: 25px;
-                height: 25px;
+                width: 35px;
+                height: 35px;
                 color: $white;
                 @include border-radius(50%);
-                line-height: 25px;
+                line-height: 35px;
             }
             #facebook,
             #twitter,
@@ -74,13 +86,14 @@ header {
         #menu_button {
             color: $category_title;
             position: absolute;
-            top: 24px;
+            top: 42px;
             left: 15px;
             cursor: pointer;
             @include bp-large {
                 display: inline-block;
                 position: static;
-                margin: 25px;
+                margin: 25px 0 25px 25px;
+                float: left;
             }
         }
         ul {
@@ -94,10 +107,12 @@ header {
                 padding: 10px 0;
                 display: inline-block;
                 li {
-                    padding-right: 20px;
+                    padding-right: 30px;
                     a {
-                        font-family: $acumin_pro_xcond;
-                        font-size: 40px;
+                        font: 40px $acumin_pro_xcond;  
+                    }
+                    &:last-child{
+                        padding-right: 0;
                     }
                 }
             }
@@ -111,7 +126,7 @@ header {
                 padding-right: 20px;
                 a {
                     color: $light_grey;
-                    font-family: $acumin_pro;
+                    font: 300 14px $acumin_pro;
                 }
             }
         }
@@ -227,7 +242,7 @@ footer {
         text-align: center;
         padding: 20px 0 30px;
         img {
-            max-width: 500px;
+            max-width: 700px;
             width: 90%;
             height: auto;
             min-height: 50px;
@@ -274,25 +289,26 @@ footer {
                 max-width: 350px;
                 width: 60%;
             }
-            button {
-                display: block;
-                background-color: $yellow;
-                @include border-radius(3px);
-                border: none;
-                font: bold 15px $acumin_pro_cond;
-                margin: 10px auto;
-                width: 200px;
-                height: 30px;
-                line-height: 30px;
-                cursor: pointer;
-                @include box-shadow(-3px, -3px, 3px, $light_grey);
-            }
             @include bp-large {
                 flex: 2;
                 text-align: center;
             }
         }
     }
+}
+
+.button {
+    display: block;
+    background-color: $yellow;
+    @include border-radius(3px);
+    border: none;
+    font: bold 15px $acumin_pro_cond;
+    margin: 10px auto;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    @include box-shadow(-3px, -3px, 3px, $light_grey);
 }
 
 .max_width {

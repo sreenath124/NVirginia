@@ -1,3 +1,7 @@
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+
+}
 @import url('https://fonts.googleapis.com/css?family=Lora|Playfair+Display');
 header {
     text-align: center;
@@ -19,22 +23,36 @@ main {
     padding: 20px 0;
 }
 
+.image_description{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: #fff;
+    font: 700 26px/26px "kepler-std", serif;
+    background-color: rgba(0, 0, 0, .5);
+}
 .story_contents {
     width: 100%;
 }
 
 .stories{
     display: block;
-    padding: 10px;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, .3);
 }
 .story{
 	display: block;
 }
 
-.story_image img,
+.story_image,
 .story {
     width: 100%;
 }
+    .story_image {
+        min-height: 350px;
+    }
 
 .story_odd{
 	background-color:#fff ;
@@ -48,11 +66,14 @@ main {
 	padding: 10px 0;
 
 }
-.story p:last-child{
+.story p:last-of-type{
 	font: 400 14px/20px 'Lora', serif;
+    padding-bottom: 15px;
 }
 .activities{
-	padding: 20px 0;
+	padding: 5px 2px;
+    background: #fff;
+    display: inline-block;
 }
 .activities_icon {
 	padding: 10px ;
@@ -60,10 +81,10 @@ main {
 	box-sizing: border-box;
 	width: 35px;
 }
-.comment_count{
+.share_count{
 	display: inline-block;
 	vertical-align: top;
-	padding-top: 10px;
+	padding-top: 9px;
 	text-transform: uppercase;
 	font: 400 12px/20px 'Lora', serif;
 	color: rgba(128, 128, 128, .7);
@@ -121,10 +142,95 @@ main {
     font: 700 14px/22px 'Playfair Display', serif;
     box-sizing: border-box;
 }
+.guides {
+    border: 5px solid rgba(128, 128, 128, .5);
+    padding: 20px;
+    text-align: center;
+    color:  #000;
+    margin-top: 30px;
+    display: block
+}
+.guide_container{
+    display: block;
+    width: 100%;
+}
+  .guide_image_box{
+        padding: 10px;
+        text-align: center;
+    }
+    .guide_image,
+    .guide_image_middle{
+        width: 100%;
+    }
+.guide_heading{
+    font:  900 29px 'Playfair Display', serif ;
+}
+.guide_caption{
+    font: 23px/26px "kepler-std", serif;
+    padding: 10px 0;
+}
 
+.slide_image{
+    position: relative;
+}
+.slide_caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 15px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    font: 700 26px/26px "kepler-std", serif;
+    text-transform: capitalize;
+}
+.flexslider{
+    border: 0;
+}
+.desktop_view{
+    display: none;
+}
+
+.restaurant{
+    background: url('../assets/restaurant.jpg') no-repeat center;
+    
+}
+.restaurant_music{
+    background: url('../assets/restaurant_music.jpg') no-repeat center;
+}
+.restaurant_food{
+    background: url('../assets/restaurant_food.jpg') no-repeat center;
+}
+.cookie{
+    background: url('../assets/cookie.jpeg') no-repeat center;
+}
+.restaurant,
+.restaurant_music,
+.restaurant_food,
+.cookie{
+    background-size:cover;
+
+}
+.error_msg{
+    color: #f00;
+}
 @media screen and (min-width: 1024px) {
+   .desktop_view{
+    display: block;
+   }
+    .slider_section{
+        height: 300px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 100%;
+    }
+    .slider li img {
+       
+        width: 100%;
+    }
     .story_contents {
-        width: 72%;
+        width: 70%;
         height: 100%;
         display: inline-block;
     }
@@ -132,6 +238,8 @@ main {
         display: table;
         width: 100%;
         table-layout: fixed;
+        padding: 20px 0;
+
     }
     .story_image,
     .story {
@@ -139,20 +247,19 @@ main {
         width: 50%;
         vertical-align: middle;
     }
-    .story_image img {
-    	min-height: 350px;
-    }
+
     .story{
     	padding: 20px 30px;
     }
     .aside_container {
         display: inline-block;
         float: right;
+        margin-top: 20px;
     }
     .aside {
         max-width: 300px;
         border: 1px solid rgba(128, 128, 128, .6);
-        padding: 0 30px;
+        padding: 0 30px 30px;
         text-align: left;
     }
     .aside_header {
@@ -188,13 +295,27 @@ main {
         font-size: 22px;
     }
 
-
-
-/* slider portion */
-.slider{
-	overflow: hidden;
-	height: 300px;
-	width: 100%;
+    .guide_container{
+        display: inline-block;
+        vertical-align: top;
+        width: 24%;
+    }
+    .guide_container:nth-of-type(2){
+        width:48%;
+    }
+  
+    .guide_image{
+        min-height: 190px;
+        max-width: 200px;
+        width: 100%;
+    }
+    .guide_image_middle {
+        width: 100%;
+        max-width: none;
+        min-height: none;
+    }
+    .guide_caption_middle{
+    font-size: 35px;
 }
 
 
