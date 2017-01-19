@@ -91,7 +91,7 @@ header #horizontal_nav {
         padding: 10px 0;
         display: inline-block; }
         header #horizontal_nav #main_nav li {
-          padding-right: 30px; }
+          padding-right: 40px; }
           header #horizontal_nav #main_nav li a {
             font: 40px "acumin-pro-extra-condensed", sans-serif; }
           header #horizontal_nav #main_nav li:last-child {
